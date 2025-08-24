@@ -34,6 +34,7 @@ jobs:
         ./../gradlew assembleFullRelease
           
     - name: sign apk
+      working-directory: wear
       run: |
         export storePassword=${{ secrets.STORE_PASSWORD }}
         export keyAlias=${{ secrets.KEY_ALIAS }}
